@@ -10,11 +10,11 @@ public class weapon : MonoBehaviour
 
     void Update()
     {
-        // transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-        if (transform.position.magnitude > 1000.0f)
-        {
-            Destroy(gameObject);
-        }
+        transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+        // if (transform.position.magnitude > 1000.0f)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 
 }

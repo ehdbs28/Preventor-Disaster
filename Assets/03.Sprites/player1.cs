@@ -38,15 +38,15 @@ public class player1 : MonoBehaviour
         }
 		
         //플레이어 총알 발사 
-		  Vector2 Dir = (MousePos - PlayerPos);
+		//   Vector2 Dir = (MousePos - PlayerPos);
  
-        if (Input.GetMouseButtonDown(0) && n != -1) // SEMI AUTO
-        {
-            GameObject projectileObject = Instantiate(projectile[n], transform.position, Quaternion.Euler(0.0f, 0.0f, rotateDg));
+        // if (Input.GetMouseButtonDown(0) && n != -1) // SEMI AUTO
+        // {
+        //     GameObject projectileObject = Instantiate(projectile[n], transform.position, Quaternion.Euler(0.0f, 0.0f, rotateDg));
             
-            weapon = projectileObject.GetComponent<weapon>();
-            weapon.Launch(Dir.normalized, 900);
-        }
+        //     weapon = projectileObject.GetComponent<weapon>();
+        //     weapon.Launch(Dir.normalized, 900);
+        // }
  
 	}
 	//반대쪽 방향으로 회전 
