@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -974343174587809527}
   m_Layer: 16
   m_Name: Enemy_Air(Ranger)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,6 +254,7 @@ MonoBehaviour:
   _targetLayer:
     serializedVersion: 2
     m_Bits: 393216
+  _attackClip: {fileID: 0}
 --- !u!114 &1481761018332988420
 MonoBehaviour:
   m_ObjectHideFlags: 0
