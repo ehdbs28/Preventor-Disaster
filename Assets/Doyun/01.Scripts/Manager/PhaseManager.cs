@@ -45,11 +45,11 @@ public class PhaseManager : MonoBehaviour
             _isPhase = true;
             OnPhaseStartEvent?.Invoke();
             
-            Debug.Log($"{_curPhase} 시작");
+            MainSceneUIManager.Instance.SetPhase(true);
             
             yield return _phaseTimeWFS;
             
-            Debug.Log($"{_curPhase} 종료");
+            MainSceneUIManager.Instance.SetPhase(false);
             
             _isPhase = false;
         }
