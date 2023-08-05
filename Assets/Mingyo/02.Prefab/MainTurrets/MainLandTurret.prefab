@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8530541344401409759}
   - component: {fileID: 2734341870236628610}
   - component: {fileID: 8249350726096712014}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: MainLandTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fba15790f0fe1b4584fde694919ed85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   _turretStatSO: {fileID: 11400000, guid: 0bfa586d838e69f40b6d8bac0ca4b451, type: 2}
   dir: {x: 0, y: 0}
   _bullet: {fileID: 4856271372027287409, guid: b72c6c116cf901d469cbd42f869eeadb, type: 3}

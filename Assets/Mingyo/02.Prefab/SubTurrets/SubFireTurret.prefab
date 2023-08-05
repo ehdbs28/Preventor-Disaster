@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7469007708076003850}
   - component: {fileID: 2731219137644738342}
   - component: {fileID: 3006795859997182387}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SubFireTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,3 +99,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turretStatSO: {fileID: 11400000, guid: 0bfa586d838e69f40b6d8bac0ca4b451, type: 2}
   dir: {x: 0, y: 0}
+  _bullet: {fileID: 0}
+  type: 0

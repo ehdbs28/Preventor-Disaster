@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 736590299026430522}
   - component: {fileID: 8664630964322556949}
   - component: {fileID: 6369585907082821286}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SubWaterTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,3 +99,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turretStatSO: {fileID: 11400000, guid: 0bfa586d838e69f40b6d8bac0ca4b451, type: 2}
   dir: {x: 0, y: 0}
+  _bullet: {fileID: 0}
+  type: 0

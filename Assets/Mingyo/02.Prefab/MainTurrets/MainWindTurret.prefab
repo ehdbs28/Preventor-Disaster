@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1096603297326375476}
   - component: {fileID: 6479539966205715652}
   - component: {fileID: 6938256364250659743}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: MainWindTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fba15790f0fe1b4584fde694919ed85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   _turretStatSO: {fileID: 11400000, guid: 0bfa586d838e69f40b6d8bac0ca4b451, type: 2}
   dir: {x: 0, y: 0}
   _bullet: {fileID: 102122592899021881, guid: b4c179f317eb2854686bfb8f5ecf444c, type: 3}

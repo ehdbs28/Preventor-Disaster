@@ -10,7 +10,7 @@ public class MainTurret : Turret
 
     [SerializeField] Vector2 dir;
 
-    [SerializeField] Bullet _bullet;                                    //Pool
+    [SerializeField] GameObject _bullet;                                    //Pool
 
     protected override void Attack()
     {
@@ -48,7 +48,8 @@ public class MainTurret : Turret
 
     private IEnumerator ShootBullet()
     {
-        Bullet bullet = Instantiate(_bullet, transform.position, Quaternion.identity).GetComponent<Bullet>();
+        GameObject obj = Instantiate(_bullet, transform.position, Quaternion.identity);
+        Bullet bullet = obj.GetComponent<Bullet>();
 
         float returnTime = 0;
         switch(type)
