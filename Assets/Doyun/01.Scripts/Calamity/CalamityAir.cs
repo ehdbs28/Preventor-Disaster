@@ -11,13 +11,10 @@ public class CalamityAir : Calamity
 
     [SerializeField] 
     private float _attackDelay;
-    
-    public override void Init()
-    {
-    }
 
     public override void OnCalamity()
     {
+        base.OnCalamity();
         StartCoroutine(CalamityRoutine());
     }
 

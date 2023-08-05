@@ -15,6 +15,9 @@ public class EnemyAttackModule : EnemyModule
 
     [SerializeField] 
     private LayerMask _targetLayer;
+
+    [SerializeField] 
+    private AudioClip _attackClip;
     
     private WaitForSeconds _attackDelayWFS;
 
@@ -51,6 +54,8 @@ public class EnemyAttackModule : EnemyModule
     {
         if (_cols.Length <= 0)
             return;
+        
+        SoundManager.Instance.PlaySFX(_attackClip);
         
         PoolingParticle particle = PoolManager.Instance.Pop("Slash") as PoolingParticle;
 

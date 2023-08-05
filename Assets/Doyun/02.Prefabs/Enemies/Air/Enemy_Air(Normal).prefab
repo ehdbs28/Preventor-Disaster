@@ -254,6 +254,7 @@ MonoBehaviour:
   _targetLayer:
     serializedVersion: 2
     m_Bits: 393216
+  _attackClip: {fileID: 8300000, guid: 17a88832872264daeb5e9be618fded59, type: 3}
 --- !u!114 &3041503398130270866
 MonoBehaviour:
   m_ObjectHideFlags: 0

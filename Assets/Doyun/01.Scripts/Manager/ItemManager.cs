@@ -14,11 +14,14 @@ public class ItemManager : MonoBehaviour
             return false;
 
         _items[(int)type] -= pay;
+        MainSceneUIManager.Instance.SetText(type, _items[(int)type]);
+
         return true;
     }
 
     public void AddItem(ElementType type)
     {
         _items[(int)type] += Random.Range(3, 7);
+        MainSceneUIManager.Instance.SetText(type, _items[(int)type]);
     }
 }
