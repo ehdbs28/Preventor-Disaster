@@ -49,6 +49,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _turret: {fileID: 3003809113656686190}
+  _audioClip: {fileID: 8300000, guid: 97f105c8821f0434c8a57e3112512ba1, type: 3}
 --- !u!1 &3003809113656686190
 GameObject:
   m_ObjectHideFlags: 0

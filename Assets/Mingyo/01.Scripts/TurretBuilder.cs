@@ -17,6 +17,9 @@ public class TurretBuilder : MonoBehaviour
 
     private SpriteRenderer _turretSpriteRenderer;
 
+    [SerializeField]
+    AudioClip _audioClip;
+
     private void Awake()
     {
         _turretSpriteRenderer = transform.Find("Turret").GetComponent<SpriteRenderer>();
@@ -72,6 +75,8 @@ public class TurretBuilder : MonoBehaviour
                 {
                     hit.transform.Find("Turret").gameObject.SetActive(true);
                     hit.collider.GetComponent<SpriteRenderer>().enabled = false;
+
+                    SoundManager.Instance.PlaySFX(_audioClip);
 
                     isWaiting = false;
                     _turret.gameObject.SetActive(false);
