@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 610769873}
   - component: {fileID: 610769872}
   m_Layer: 6
-  m_Name: TurretPos (2)
+  m_Name: FireTurretPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610769871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: -1.53, z: 0}
+  m_LocalPosition: {x: -6.37, y: -1.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 1047570436}
   - component: {fileID: 1047570439}
   m_Layer: 6
-  m_Name: TurretPos
+  m_Name: WaterTurretPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047570435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.29, y: 2.16, z: 0}
+  m_LocalPosition: {x: 5.74, y: -1.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 1704596314}
   - component: {fileID: 1704596313}
   m_Layer: 6
-  m_Name: TurretPos (1)
+  m_Name: WindTurretPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704596312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 2.16, z: 0}
+  m_LocalPosition: {x: 0.43, y: 2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 2032934648}
   - component: {fileID: 2032934647}
   m_Layer: 6
-  m_Name: TurretPos (3)
+  m_Name: LandTurretPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

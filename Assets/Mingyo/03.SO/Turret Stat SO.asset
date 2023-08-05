@@ -18,21 +18,21 @@ MonoBehaviour:
     Damage: 5
     Range: 10
     Hp: 10
-  - turret: {fileID: 0}
-    AttackSpeed: 0
-    Damage: 0
-    Range: 0
-    Hp: 0
-  - turret: {fileID: 0}
-    AttackSpeed: 0
-    Damage: 0
-    Range: 0
-    Hp: 0
-  - turret: {fileID: 0}
-    AttackSpeed: 0
-    Damage: 0
-    Range: 0
-    Hp: 0
+  - turret: {fileID: 6369585907082821286, guid: bacf3413045e94b4498506d63f686773, type: 3}
+    AttackSpeed: 0.5
+    Damage: 5
+    Range: 10
+    Hp: 10
+  - turret: {fileID: 6938256364250659743, guid: 232eac7bf173dac4bb4a949635145a69, type: 3}
+    AttackSpeed: 0.5
+    Damage: 5
+    Range: 10
+    Hp: 10
+  - turret: {fileID: 8249350726096712014, guid: f0f74a7a917ef4b4093e98424c0eb955, type: 3}
+    AttackSpeed: 0.5
+    Damage: 5
+    Range: 10
+    Hp: 10
   - turret: {fileID: 0}
     AttackSpeed: 0
     Damage: 0
