@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class InstallTurret : MonoBehaviour
+public class TurretBuilder : MonoBehaviour
 {
     [SerializeField]
     private LayerMask TurretPosMask;
