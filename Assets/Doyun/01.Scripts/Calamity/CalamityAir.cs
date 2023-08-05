@@ -34,7 +34,7 @@ public class CalamityAir : Calamity
             particle.Play();
             
             point = Random.Range(_spawnMin.position.y, _spawnMax.position.y);
-            Vector3 dest = new Vector3(spawnPos.x + 20f, point);
+            Vector3 dest = new Vector3(spawnPos.x + 35f, point);
 
             float time = 2f;
             float cur = 0f;

@@ -16,6 +16,6 @@ public class CalamityEarth : Calamity
         particle.SetPositionAndRotation(_pos.position, Quaternion.identity);
         particle.Play();
         
-        //카메라 쉐이크 추가
+        CameraManager.Instance.ShakeCam(10f, 0.1f);
     }
 }

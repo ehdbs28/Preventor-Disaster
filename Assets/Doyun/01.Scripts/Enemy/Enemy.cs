@@ -77,4 +77,12 @@ public class Enemy : PoolableMono
 
         IsAlive = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!_actionData.IsArrived && other.CompareTag("CalamityZone"))
+        {
+            _actionData.IsArrived = true;
+        }
+    }
 }

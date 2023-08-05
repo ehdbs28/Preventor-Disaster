@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         PhaseManager.Instance = GetComponent<PhaseManager>();
         EnemyManager.Instance = GetComponent<EnemyManager>();
+        CameraManager.Instance = GetComponent<CameraManager>();
         PoolManager.Instance = new PoolManager(_poolParent);
         foreach (var pair in _poolingList.Pairs)
         {

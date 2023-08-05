@@ -27,7 +27,7 @@ public class CalamityFire : Calamity
             float point = Random.Range(_spawnMin.position.x, _spawnMax.position.x);
             Vector3 spawnPos = new Vector3(point, _spawnMax.position.y);
 
-            for (float y = spawnPos.y; y >= spawnPos.y - 20f; y -= 0.5f)
+            for (float y = spawnPos.y; y >= spawnPos.y - 25f; y -= 0.5f)
             {
                 Vector3 pos = spawnPos;
                 pos.y = y;

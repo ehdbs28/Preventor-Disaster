@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CalamityZone
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Enemy
   - Player
   - Tower
-  - 
+  - CalamityZone
   - 
   - 
   - 
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: TileMap
+    uniqueID: 3567868199
+    locked: 0
+  - name: Playeable
+    uniqueID: 3703951913
+    locked: 0
+  - name: Effect
+    uniqueID: 1694248121
     locked: 0
