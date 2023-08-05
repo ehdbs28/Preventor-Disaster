@@ -47,6 +47,11 @@ public class gun : MonoBehaviour
 {
 	[SerializeField]
 	private float moveSpeed;
+	[SerializeField]
+	private GameObject weapon;
+	[SerializeField]
+	private Transform shootTransform; //게임 오브젝트가 가지고 있는 shootTransform 
+
 	private bool isFacingRight = true;
     // public float maxSpeed;
     //물리엔진으로 이동
@@ -76,17 +81,21 @@ public class gun : MonoBehaviour
 		float VerticalInput = Input.GetAxisRaw("Vertical");
 		Vector3 moveTo = new Vector3(horizontalInput,VerticalInput,0f);
 		transform.position +=moveTo * moveSpeed * Time.deltaTime;
-
+		
 		// 캐릭터 뒤집기
         if (horizontalInput > 0 && !isFacingRight)
         {
             Flip();
+			Shoot();
         }
         else if (horizontalInput < 0 && isFacingRight)
         {
             Flip();
+			Shoot();
         }
-
+		void Shoot(){
+			Instantiate(weapon,shootTransform.position,Quaternion.identity);
+		}
 	}
 	private void Flip()
     {
