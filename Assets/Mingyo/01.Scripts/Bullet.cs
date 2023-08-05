@@ -6,11 +6,14 @@ public class Bullet : MonoBehaviour
 {
     private float range = 5;
 
-    private LayerMask _enemyLayer = 1 << 7;
+    public float Damage;
+
+    private LayerMask _enemyLayer = 1 << 16;
 
     [SerializeField] private float speed;
 
     Vector3 dir;
+
 
     private void Update()
     {
@@ -32,7 +35,9 @@ public class Bullet : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            Destroy(gameObject);                                  //Pool
+            EnemyHealthModule enemy = collision.gameObject.GetComponent<EnemyHealthModule>();
+            enemy.OnDamage(Damage);
+            Destroy(gameObject);
         }
     }
 }

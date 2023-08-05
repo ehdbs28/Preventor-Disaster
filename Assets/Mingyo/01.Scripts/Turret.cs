@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Turret : MonoBehaviour
 {
-    LayerMask _enemyLayer = 1 << 7;
+    LayerMask _enemyLayer = 1 << 16;
 
     protected float detectionAngle = 60f;
 

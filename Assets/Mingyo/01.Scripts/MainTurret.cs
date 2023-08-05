@@ -1,14 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MainTurret : Turret
 {
+    [SerializeField] ElementType type;
     [SerializeField] TurretStatSO _turretStatSO;
 
     [SerializeField] Vector2 dir;
 
-    [SerializeField] GameObject _bullet;                                    //Pool
+    [SerializeField] Bullet _bullet;                                    //Pool
 
     protected override void Attack()
     {
@@ -41,7 +43,34 @@ public class MainTurret : Turret
     protected override void OnShoot()
     {
         Debug.Log("Shoot");
+        StartCoroutine(ShootBullet());
+    }
 
-        Instantiate(_bullet, transform.position, Quaternion.identity);
+    private IEnumerator ShootBullet()
+    {
+        Bullet bullet = Instantiate(_bullet, transform.position, Quaternion.identity).GetComponent<Bullet>();
+
+        float returnTime = 0;
+        switch(type)
+        {
+            case ElementType.Fire:
+                bullet.Damage = _turretStatSO.FireTurretStat.Damage;
+                returnTime = _turretStatSO.FireTurretStat.AttackSpeed;
+                break;
+            case ElementType.Earth:
+                bullet.Damage = _turretStatSO.LandTurretStat.Damage;
+                returnTime = _turretStatSO.LandTurretStat.AttackSpeed;
+                break;
+            case ElementType.Air:
+                bullet.Damage = _turretStatSO.WindTurretStat.Damage;
+                returnTime = _turretStatSO.WindTurretStat.AttackSpeed;
+                break;
+            case ElementType.Water:
+                bullet.Damage = _turretStatSO.WaterTurretStat.Damage;
+                returnTime = _turretStatSO.WaterTurretStat.AttackSpeed;
+                break;
+        }
+
+        yield return new WaitForSeconds(returnTime);
     }
 }
