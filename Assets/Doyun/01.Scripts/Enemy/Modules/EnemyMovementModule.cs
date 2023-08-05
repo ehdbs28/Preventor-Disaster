@@ -19,10 +19,10 @@ public class EnemyMovementModule : EnemyModule
                 EnemyCon.ActionData.Dir = Vector3.up;
                 break;
             case ElementType.Air:
-                EnemyCon.ActionData.Dir = Vector3.left;
+                EnemyCon.ActionData.Dir = Vector3.right;
                 break;
             case ElementType.Earth:
-                EnemyCon.ActionData.Dir = Vector3.right;
+                EnemyCon.ActionData.Dir = Vector3.left;
                 break;
         }
     }

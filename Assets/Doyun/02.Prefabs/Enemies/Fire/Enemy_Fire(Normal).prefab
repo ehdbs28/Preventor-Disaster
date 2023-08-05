@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 785543654768117177}
   - component: {fileID: 7899026438566192333}
   - component: {fileID: 1606242447387437684}
+  - component: {fileID: 5638424815643211021}
+  - component: {fileID: -7011467584633695870}
   m_Layer: 0
   m_Name: Enemy_Fire(Normal)
   m_TagString: Untagged
@@ -116,6 +118,43 @@ MonoBehaviour:
   Dir: {x: 0, y: 0, z: 0}
   IsArrived: 0
   CanAttack: 0
+--- !u!58 &5638424815643211021
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529702442556490078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!50 &-7011467584633695870
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529702442556490078}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7919633333639733734
 GameObject:
   m_ObjectHideFlags: 0
