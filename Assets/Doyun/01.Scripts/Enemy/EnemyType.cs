@@ -2,5 +2,6 @@ public enum EnemyType
 {
     Normal,
     Heavy,
-    Speedy
+    Speedy,
+    Ranger,
 }

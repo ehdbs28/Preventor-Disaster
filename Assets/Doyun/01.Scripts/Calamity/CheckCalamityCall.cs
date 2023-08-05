@@ -51,7 +51,16 @@ public class CheckCalamityCall : MonoBehaviour
 
     private bool Check()
     {
-        Collider[] cols = Physics.OverlapBox(_collider.offset, _collider.size / 2, Quaternion.identity, _targetLayer);
+        Collider2D[] cols = Physics2D.OverlapBoxAll(transform.position, _collider.size * 1.5f / 2, 0, _targetLayer);
+
+        foreach (var col in cols)
+        {
+            if (col.TryGetComponent<Enemy>(out var con))
+            {
+                con.ActionData.IsArrived = true;
+            }
+        }
+        
         return cols.Length >= _targetCheckLimit;
     }
 }

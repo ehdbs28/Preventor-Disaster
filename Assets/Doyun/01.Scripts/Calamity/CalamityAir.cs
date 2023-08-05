@@ -48,7 +48,7 @@ public class CalamityAir : Calamity
                 Vector3 pos = Vector3.Lerp(spawnPos, dest, percent);
                 particle.SetPositionAndRotation(pos, quaternion.identity);
                 
-                Collider[] cols = Physics.OverlapBox(pos, Vector3.one, Quaternion.identity, _targetLayer);
+                Collider2D[] cols = Physics2D.OverlapBoxAll(pos, Vector3.one, 0,_targetLayer);
                 for (int j = 0; j < cols.Length; j++)
                 {
                     if (cols[j].TryGetComponent<IDamageable>(out var onDamage))

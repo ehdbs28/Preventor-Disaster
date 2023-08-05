@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1606242447387437684}
   - component: {fileID: 5638424815643211021}
   - component: {fileID: -7011467584633695870}
-  m_Layer: 0
+  - component: {fileID: 1155340456737340619}
+  m_Layer: 16
   m_Name: Enemy_Fire(Normal)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -155,6 +156,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1155340456737340619
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529702442556490078}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 92223a0a00b214244a8243540b4c90c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7919633333639733734
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +188,7 @@ GameObject:
   - component: {fileID: 6984988562798584169}
   - component: {fileID: 916168241956805715}
   - component: {fileID: 6083805176867295756}
+  - component: {fileID: 1869149630015798044}
   m_Layer: 0
   m_Name: Modules
   m_TagString: Untagged
@@ -201,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2710c85ab061425fbf15d7e89aba2ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initSpeed: 5
+  _speed: 4
 --- !u!114 &916168241956805715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,9 +249,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e8baa3b8fb44dfa6651adb939f21e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackDamage: 0
-  _attackDelay: 0
+  _attackDamage: 5
+  _attackDelay: 1
   _attackRadius: 3
   _targetLayer:
     serializedVersion: 2
     m_Bits: 524288
+--- !u!114 &1869149630015798044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7919633333639733734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2348532f363d546d1abd8abbaaab438e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

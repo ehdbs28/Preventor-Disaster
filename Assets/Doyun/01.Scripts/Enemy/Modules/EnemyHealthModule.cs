@@ -13,7 +13,7 @@ public class EnemyHealthModule : EnemyModule, IDamageable
     
     public override void AwakeModule()
     {
-        _maxHp = _initMaxHp * PhaseManager.Instance.CurPhase;
+        _maxHp = _initMaxHp + (Mathf.Pow(2, PhaseManager.Instance.CurPhase) / 2 - 2);
         _currentHp = _maxHp;
     }
 

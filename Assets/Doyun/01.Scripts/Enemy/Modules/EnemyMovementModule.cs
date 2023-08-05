@@ -3,13 +3,10 @@ using UnityEngine;
 public class EnemyMovementModule : EnemyModule
 {
     [SerializeField]
-    private float _initSpeed;
     private float _speed;
     
     public override void AwakeModule()
     {
-        _speed = _initSpeed * PhaseManager.Instance.CurPhase;
-
         switch (EnemyCon.ElementType)
         {
             case ElementType.Fire:

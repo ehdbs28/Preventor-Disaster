@@ -36,7 +36,7 @@ public class CalamityFire : Calamity
                 particle.SetPositionAndRotation(pos, quaternion.identity);
                 particle.Play();
 
-                Collider[] cols = Physics.OverlapBox(pos, Vector3.one, quaternion.identity, _targetLayer);
+                Collider2D[] cols = Physics2D.OverlapBoxAll(pos, Vector3.one, 0,_targetLayer);
                 for (int j = 0; j < cols.Length; j++)
                 {
                     if (cols[j].TryGetComponent<IDamageable>(out var onDamage))

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2710c85ab061425fbf15d7e89aba2ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initSpeed: 5
+  _speed: 4
 --- !u!114 &4759412766902739890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e8baa3b8fb44dfa6651adb939f21e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackDamage: 0
-  _attackDelay: 0
+  _attackDamage: 5
+  _attackDelay: 1
   _attackRadius: 3
   _targetLayer:
     serializedVersion: 2
@@ -92,7 +92,8 @@ GameObject:
   - component: {fileID: 7598683310234457603}
   - component: {fileID: -5292988284286061448}
   - component: {fileID: 1097442256640726629}
-  m_Layer: 0
+  - component: {fileID: -6903440088452109536}
+  m_Layer: 16
   m_Name: Enemy_Water(Normal)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.36320752, g: 0.702791, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -233,3 +234,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &-6903440088452109536
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435199000604766147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: b6275eb03fd204d7c8d969eac198625a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

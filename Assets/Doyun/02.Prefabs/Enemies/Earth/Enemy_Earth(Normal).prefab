@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3969366319589763846}
   - component: {fileID: -1434082647701491242}
   - component: {fileID: -3811833153630974502}
-  m_Layer: 0
+  - component: {fileID: 528453970260342487}
+  m_Layer: 16
   m_Name: Enemy_Earth(Normal)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,8 +80,8 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4245283, g: 0.2503115, b: 0.2503115, a: 1}
-  m_FlipX: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -155,6 +156,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &528453970260342487
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3275845318449818492}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 186104dce6ca043759ded5e7c195e4b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3616598145594011767
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +188,7 @@ GameObject:
   - component: {fileID: 7537962371594836813}
   - component: {fileID: 4501036753136309436}
   - component: {fileID: 5443275519419545258}
+  - component: {fileID: 3067019742395644360}
   m_Layer: 0
   m_Name: Modules
   m_TagString: Untagged
@@ -201,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2710c85ab061425fbf15d7e89aba2ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initSpeed: 5
+  _speed: 4
 --- !u!114 &4501036753136309436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,9 +249,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e8baa3b8fb44dfa6651adb939f21e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackDamage: 0
-  _attackDelay: 0
+  _attackDamage: 5
+  _attackDelay: 1
   _attackRadius: 3
   _targetLayer:
     serializedVersion: 2
     m_Bits: 524288
+--- !u!114 &3067019742395644360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616598145594011767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2348532f363d546d1abd8abbaaab438e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

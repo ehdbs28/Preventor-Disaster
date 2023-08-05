@@ -8,4 +8,12 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: EnemyAnimatorController(Earth)
   m_Controller: {fileID: 9100000, guid: f36a42ecdc45d4b92bda6622c399dc7e, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: cb8fcf1238b734d12943f0edfa948d18, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f8403b81b13c748f1a3ddaff08690aca, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4c17da460f0534b69a755510f04c48a2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a08fd9ac417aa4be3ba77a0e19eb321d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c650fabc458a04d80aa5991182ed3c0f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: efee107f0e7e6489cbd604e5d822685e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4fcb5294934654055929e8f760e03cf7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 43e63395ccb554ef795449e92b451d13, type: 2}

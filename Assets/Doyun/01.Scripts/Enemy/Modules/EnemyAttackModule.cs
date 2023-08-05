@@ -48,11 +48,11 @@ public class EnemyAttackModule : EnemyModule
     {
         Vector3 attackDir = EnemyCon.ActionData.Dir;
 
-        Collider[] cols = Physics.OverlapSphere(transform.position + attackDir, _attackRadius, _targetLayer);
+        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position + attackDir, _attackRadius, _targetLayer);
 
         if (cols.Length > 0)
         {
-            foreach (Collider col in cols)
+            foreach (var col in cols)
             {
                 if (col.TryGetComponent<IDamageable>(out IDamageable onDamage))
                 {

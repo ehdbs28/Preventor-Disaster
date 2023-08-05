@@ -69,10 +69,6 @@ public class EnemyManager : MonoBehaviour
                 {
                     enemy.transform.position = randomPos;
 
-                    Vector3 dir = (Vector3.zero - spawnPos).normalized;
-                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    enemy.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
                     enemy.GetModule<EnemyHealthModule>().OnDieEvent += () =>
                     {
                         // 이펙트 추가

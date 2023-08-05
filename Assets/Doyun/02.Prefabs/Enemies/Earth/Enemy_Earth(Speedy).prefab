@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3137339588264904499}
   - component: {fileID: 2110077535258248037}
   - component: {fileID: 6453337171481398287}
+  - component: {fileID: 8574818529411884982}
   m_Layer: 0
   m_Name: Modules
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2710c85ab061425fbf15d7e89aba2ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initSpeed: 10
+  _speed: 7
 --- !u!114 &2110077535258248037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,12 +73,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e8baa3b8fb44dfa6651adb939f21e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackDamage: 0
-  _attackDelay: 0
+  _attackDamage: 2
+  _attackDelay: 0.3
   _attackRadius: 3
   _targetLayer:
     serializedVersion: 2
     m_Bits: 524288
+--- !u!114 &8574818529411884982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6923802869239596383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2348532f363d546d1abd8abbaaab438e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8911333104711083024
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +105,8 @@ GameObject:
   - component: {fileID: 8221983642399654825}
   - component: {fileID: -4720329898640376471}
   - component: {fileID: -5282395745618377874}
-  m_Layer: 0
+  - component: {fileID: -5696642396971783408}
+  m_Layer: 16
   m_Name: Enemy_Earth(Speedy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,8 +171,8 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4245283, g: 0.2503115, b: 0.2503115, a: 1}
-  m_FlipX: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -233,3 +247,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &-5696642396971783408
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911333104711083024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 186104dce6ca043759ded5e7c195e4b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
