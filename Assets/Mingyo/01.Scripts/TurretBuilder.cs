@@ -53,7 +53,7 @@ public class TurretBuilder : MonoBehaviour
 
             _turret.transform.position = _mousePos;
 
-            RaycastHit2D hit = Physics2D.Raycast(_mousePos, Vector2.zero, TurretPosMask);
+            RaycastHit2D hit = Physics2D.Raycast(_mousePos, Vector2.zero,0, TurretPosMask);
 
             if (hit.collider != null && !hit.transform.Find("Turret").gameObject.activeInHierarchy)
             {
