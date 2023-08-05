@@ -10,12 +10,10 @@ public class CalamityFire : Calamity
     [SerializeField]
     private Transform _spawnMin, _spawnMax;
 
-    public override void Init()
-    {
-    }
-
     public override void OnCalamity()
     {
+        base.OnCalamity();
+
         StartCoroutine(CalamityRoutine());
     }
 
