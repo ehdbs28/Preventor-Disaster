@@ -31,7 +31,7 @@ public class InstallTurret : MonoBehaviour
             {
                 _turret.gameObject.SetActive(false);
                 isWaiting = false;
-                StopCoroutine(WaitingInstall());
+                StopAllCoroutines();
             }
             else
             {
@@ -45,7 +45,6 @@ public class InstallTurret : MonoBehaviour
 
     private IEnumerator WaitingInstall()
     {
-
         while(true)
         {
             _mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -56,7 +55,7 @@ public class InstallTurret : MonoBehaviour
 
             RaycastHit2D hit = Physics2D.Raycast(_mousePos, Vector2.zero, TurretPosMask);
 
-            if (hit.collider != null)
+            if (hit.collider != null && !hit.transform.Find("Turret").gameObject.activeInHierarchy)
             {
                 _turretSpriteRenderer.color = hit.collider.transform.Find("Turret").GetComponent<SpriteRenderer>().color;
             }
@@ -67,7 +66,7 @@ public class InstallTurret : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                if(hit.collider != null)
+                if(hit.collider != null && !hit.transform.Find("Turret").gameObject.activeInHierarchy)
                 {
                     hit.transform.Find("Turret").gameObject.SetActive(true);
                     hit.collider.GetComponent<SpriteRenderer>().enabled = false;
@@ -75,12 +74,11 @@ public class InstallTurret : MonoBehaviour
 
                     isWaiting = false;
                     _turret.gameObject.SetActive(false);
-                    StopCoroutine(WaitingInstall());
+                    StopAllCoroutines();
                 }
             }
 
             yield return null;
         }
     }
-
 }
