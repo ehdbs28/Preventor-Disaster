@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour
 
     Vector3 dir;
 
-
     private void Update()
     {
         Collider2D hit = Physics2D.OverlapCircle(transform.position, range, _enemyLayer);

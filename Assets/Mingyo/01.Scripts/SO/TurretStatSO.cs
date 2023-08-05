@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class TurretStat
 {
-    public float AttackSpeed;
+    public float ReloadTime;
     public float Damage;
     public float Range;
 }

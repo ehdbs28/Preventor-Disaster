@@ -56,19 +56,19 @@ public class SubTurret : Turret
         {
             case ElementType.Fire:
                 bullet.Damage = _turretStatSO.FireTurretStat.Damage;
-                returnTime = _turretStatSO.FireTurretStat.AttackSpeed;
+                returnTime = _turretStatSO.FireTurretStat.ReloadTime;
                 break;
             case ElementType.Earth:
                 bullet.Damage = _turretStatSO.LandTurretStat.Damage;
-                returnTime = _turretStatSO.LandTurretStat.AttackSpeed;
+                returnTime = _turretStatSO.LandTurretStat.ReloadTime;
                 break;
             case ElementType.Air:
                 bullet.Damage = _turretStatSO.WindTurretStat.Damage;
-                returnTime = _turretStatSO.WindTurretStat.AttackSpeed;
+                returnTime = _turretStatSO.WindTurretStat.ReloadTime;
                 break;
             case ElementType.Water:
                 bullet.Damage = _turretStatSO.WaterTurretStat.Damage;
-                returnTime = _turretStatSO.WaterTurretStat.AttackSpeed;
+                returnTime = _turretStatSO.WaterTurretStat.ReloadTime;
                 break;
         }
 
