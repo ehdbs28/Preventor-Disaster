@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         EnemyManager.Instance = GetComponent<EnemyManager>();
         CameraManager.Instance = GetComponent<CameraManager>();
         ItemManager.Instance = GetComponent<ItemManager>();
+        SoundManager.Instance = GetComponent<SoundManager>();
         MainSceneUIManager.Instance = GetComponent<MainSceneUIManager>();
         PoolManager.Instance = new PoolManager(_poolParent);
         foreach (var pair in _poolingList.Pairs)
