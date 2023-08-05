@@ -13,7 +13,7 @@ public class MainLandTurret : Turret
 
     private void Update()
     {
-        if (CheckInnerDistance(_turretStatSO.TurretStatList[3].Range, Vector2.down))
+        if (CheckInnerDistance(_turretStatSO.MainTurretStat.Range, Vector2.down))
         {
             Attack();
         }
@@ -21,6 +21,6 @@ public class MainLandTurret : Turret
 
     private void OnDrawGizmos()
     {
-        DrawFanShapedGizmo(transform.position, _turretStatSO.TurretStatList[3].Range, detectionAngle / 2, Vector2.down);
+        DrawFanShapedGizmo(transform.position, _turretStatSO.MainTurretStat.Range, detectionAngle / 2, Vector2.down);
     }
 }

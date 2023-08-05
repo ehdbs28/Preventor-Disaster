@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainWindTurret : Turret
+public class SubFireTurret : Turret
 {
     [SerializeField] TurretStatSO _turretStatSO;
 
@@ -13,7 +13,7 @@ public class MainWindTurret : Turret
 
     private void Update()
     {
-        if (CheckInnerDistance(_turretStatSO.TurretStatList[2].Range, Vector2.up))
+        if (CheckInnerDistance(_turretStatSO.SubTurretStat.Range, Vector2.right))
         {
             Attack();
         }
@@ -21,6 +21,6 @@ public class MainWindTurret : Turret
 
     private void OnDrawGizmos()
     {
-        DrawFanShapedGizmo(transform.position, _turretStatSO.TurretStatList[2].Range, detectionAngle / 2, Vector2.up);
+        DrawFanShapedGizmo(transform.position, _turretStatSO.SubTurretStat.Range, detectionAngle / 2, Vector2.right);
     }
 }

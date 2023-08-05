@@ -6,7 +6,6 @@ using UnityEngine;
 [Serializable]
 public class TurretStat
 {
-    public Turret turret; 
     public float AttackSpeed;
     public float Damage;
     public float Range;
@@ -16,6 +15,7 @@ public class TurretStat
 [CreateAssetMenu(menuName = "SO/Turret")]
 public class TurretStatSO : ScriptableObject
 {
-    public List<TurretStat> TurretStatList;
+    public TurretStat MainTurretStat;
+    public TurretStat SubTurretStat;
 
 }
