@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -15,12 +16,13 @@ public class EnemyAttackModule : EnemyModule
     [SerializeField] 
     private LayerMask _targetLayer;
     
-    private WaitUntil _canAttackUntil;
     private WaitForSeconds _attackDelayWFS;
+
+    private Vector3 _attackDir;
+    private Collider2D[] _cols = { };
     
     public override void AwakeModule()
     {
-        _canAttackUntil = new WaitUntil(() => EnemyCon.ActionData.CanAttack);
         _attackDelayWFS = new WaitForSeconds(_attackDelay);
 
         StartCoroutine(AttackRoutine());
@@ -28,6 +30,8 @@ public class EnemyAttackModule : EnemyModule
 
     public override void UpdateModule()
     {
+        _attackDir = EnemyCon.ActionData.Dir;
+        _cols = Physics2D.OverlapCircleAll(EnemyCon.transform.position + _attackDir, _attackRadius, _targetLayer);
     }
 
     public override void FixedUpdateModule()
@@ -38,7 +42,6 @@ public class EnemyAttackModule : EnemyModule
     {
         while (true)
         {
-            yield return _canAttackUntil;
             Attack();
             yield return _attackDelayWFS;
         }
@@ -46,18 +49,21 @@ public class EnemyAttackModule : EnemyModule
 
     private void Attack()
     {
-        Vector3 attackDir = EnemyCon.ActionData.Dir;
+        if (_cols.Length <= 0)
+            return;
+        
+        PoolingParticle particle = PoolManager.Instance.Pop("Slash") as PoolingParticle;
 
-        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position + attackDir, _attackRadius, _targetLayer);
+        Vector3 pos = EnemyCon.transform.position + _attackDir;
 
-        if (cols.Length > 0)
+        float angle = Mathf.Atan2(_attackDir.y, _attackDir.x) * Mathf.Rad2Deg;
+        particle.SetPositionAndRotation(pos, Quaternion.AngleAxis(angle, Vector3.forward));
+        
+        foreach (var col in _cols)
         {
-            foreach (var col in cols)
+            if (col.TryGetComponent<IDamageable>(out IDamageable onDamage))
             {
-                if (col.TryGetComponent<IDamageable>(out IDamageable onDamage))
-                {
-                    onDamage.OnDamage(_attackDamage);
-                }
+                onDamage.OnDamage(_attackDamage);
             }
         }
     }

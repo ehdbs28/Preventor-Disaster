@@ -78,7 +78,7 @@ MonoBehaviour:
   _attackRadius: 3
   _targetLayer:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 393216
 --- !u!114 &1403195676361526347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dir: {x: 0, y: 0, z: 0}
   IsArrived: 0
-  CanAttack: 0
 --- !u!58 &6280439533492981695
 CircleCollider2D:
   m_ObjectHideFlags: 0

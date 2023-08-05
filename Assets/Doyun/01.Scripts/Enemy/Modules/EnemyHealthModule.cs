@@ -31,6 +31,9 @@ public class EnemyHealthModule : EnemyModule, IDamageable
         if (_currentHp <= 0f)
         {
             EnemyCon.IsAlive = false;
+            PoolingParticle boom = PoolManager.Instance.Pop("Boom") as PoolingParticle;
+            boom.SetPositionAndRotation(transform.position, Quaternion.identity);
+            boom.Play();
             OnDieEvent?.Invoke();
             PoolManager.Instance.Push(EnemyCon);
         }
