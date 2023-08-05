@@ -22,5 +22,6 @@ public class MainWaterTurret : Turret
     private void OnDrawGizmos()
     {
         DrawFanShapedGizmo(transform.position, _turretStatSO.MainTurretStat.Range, detectionAngle / 2, Vector2.right);
+
     }
 }

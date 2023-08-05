@@ -22,7 +22,6 @@ public class TurretBuilder : MonoBehaviour
         _turretSpriteRenderer = transform.Find("Turret").GetComponent<SpriteRenderer>();
     }
 
-
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))
@@ -57,10 +56,14 @@ public class TurretBuilder : MonoBehaviour
 
             if (hit.collider != null && !hit.transform.Find("Turret").gameObject.activeInHierarchy)
             {
-                _turretSpriteRenderer.color = hit.collider.transform.Find("Turret").GetComponent<SpriteRenderer>().color;
+                Transform targetTurret = hit.collider.transform.Find("Turret");
+
+                _turretSpriteRenderer.color = targetTurret.GetComponent<SpriteRenderer>().color;
+                _turret.transform.localScale = targetTurret.transform.localScale;
             }
             else
             {
+                _turret.transform.localScale = new Vector3(1,1,1);
                 _turretSpriteRenderer.color = Color.white;
             }
 
