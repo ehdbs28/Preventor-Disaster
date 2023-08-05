@@ -67,13 +67,11 @@ public class InstallTurret : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-
                 if(hit.collider != null)
                 {
                     hit.transform.Find("Turret").gameObject.SetActive(true);
                     hit.collider.GetComponent<SpriteRenderer>().enabled = false;
                     _turretSpriteRenderer.color = Color.white;
-
 
                     isWaiting = false;
                     _turret.gameObject.SetActive(false);

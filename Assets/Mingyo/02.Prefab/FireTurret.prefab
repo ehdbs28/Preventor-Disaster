@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7469007708076003850}
   - component: {fileID: 2731219137644738342}
+  - component: {fileID: 3006795859997182387}
   m_Layer: 0
-  m_Name: Red
+  m_Name: FireTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3006795859997182387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5880170318815800132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b782d051398abfe42a39e6a5bb8d65d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _turretStatSO: {fileID: 11400000, guid: 0bfa586d838e69f40b6d8bac0ca4b451, type: 2}
