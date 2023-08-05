@@ -68,12 +68,6 @@ public class EnemyManager : MonoBehaviour
                 if (enemy != null)
                 {
                     enemy.transform.position = randomPos;
-
-                    enemy.GetModule<EnemyHealthModule>().OnDieEvent += () =>
-                    {
-                        // 이펙트 추가
-                        GameManager.Instance.IsGameOver = true;
-                    };
                 }
             }
             yield return wfs;   

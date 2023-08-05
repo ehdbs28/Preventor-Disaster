@@ -9,8 +9,6 @@ public class EnemyHealthModule : EnemyModule, IDamageable
     private float _maxHp;
     private float _currentHp;
 
-    public event Action OnDieEvent = null;
-    
     public override void AwakeModule()
     {
         _maxHp = _initMaxHp + (Mathf.Pow(2, PhaseManager.Instance.CurPhase) / 2 - 2);
@@ -31,10 +29,13 @@ public class EnemyHealthModule : EnemyModule, IDamageable
         if (_currentHp <= 0f)
         {
             EnemyCon.IsAlive = false;
+            
+            ItemManager.Instance.AddItem(EnemyCon.ElementType);
+            
             PoolingParticle boom = PoolManager.Instance.Pop("Boom") as PoolingParticle;
             boom.SetPositionAndRotation(transform.position, Quaternion.identity);
             boom.Play();
-            OnDieEvent?.Invoke();
+            
             PoolManager.Instance.Push(EnemyCon);
         }
     }
