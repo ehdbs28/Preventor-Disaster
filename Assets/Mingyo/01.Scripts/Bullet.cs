@@ -34,9 +34,11 @@ public class Bullet : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            EnemyHealthModule enemy = collision.gameObject.GetComponent<EnemyHealthModule>();
-            enemy.OnDamage(Damage);
-            Destroy(gameObject);
+            if(collision.TryGetComponent<Enemy>(out Enemy enemy))
+            {
+                enemy.GetModule<EnemyHealthModule>().OnDamage(Damage);
+                Destroy(gameObject);
+            }
         }
     }
 }

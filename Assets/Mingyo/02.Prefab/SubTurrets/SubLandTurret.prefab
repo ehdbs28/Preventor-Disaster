@@ -98,6 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turretStatSO: {fileID: 11400000, guid: 0bfa586d838e69f40b6d8bac0ca4b451, type: 2}
-  dir: {x: 0, y: 0}
-  _bullet: {fileID: 0}
-  type: 0
+  dir: {x: 1, y: 0}
+  _bullet: {fileID: 4856271372027287409, guid: 35b0cafa94b12fb40acf968160faa10c, type: 3}
+  type: 2
