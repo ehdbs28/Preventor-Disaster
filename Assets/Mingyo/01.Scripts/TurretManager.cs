@@ -10,8 +10,7 @@ public class TurretManager : MonoBehaviour
 
     public static TurretManager Instance;
 
-    private int mainUpgradeCount = 0;
-    private int subUpgradeCount = 0;
+    public int UpgradeCount = 0;
 
     private void Awake()
     {
@@ -22,73 +21,54 @@ public class TurretManager : MonoBehaviour
         Instance = this;
 
         SetUp();
-
-        for(int i = 0; i < 2; i++)
-        {
-            MainTurretUpgrade("AttackSpeed", 10);
-            SubTurretUpgrade("AttackSpeed", 10);
-        }
     }
 
     private void SetUp()
     {
-        _turretStatSO.MainTurretStat.AttackSpeed = 0.5f;
-        _turretStatSO.MainTurretStat.Damage = 5f;
-        _turretStatSO.MainTurretStat.Range = 5f;
-        _turretStatSO.MainTurretStat.Hp = 50;
+        _turretStatSO.FireTurretStat.AttackSpeed = 0.5f;
+        _turretStatSO.FireTurretStat.Damage = 5f;
+        _turretStatSO.FireTurretStat.Range = 5f;
 
-        _turretStatSO.SubTurretStat.AttackSpeed = 0.7f;
-        _turretStatSO.SubTurretStat.Damage = 2f;
-        _turretStatSO.SubTurretStat.Range = 5f;
-        _turretStatSO.SubTurretStat.Hp = 50;
+        _turretStatSO.WindTurretStat.AttackSpeed = 0.7f;
+        _turretStatSO.WindTurretStat.Damage = 2f;
+        _turretStatSO.WindTurretStat.Range = 5f;
+
+        _turretStatSO.WaterTurretStat.AttackSpeed = 0.7f;
+        _turretStatSO.WaterTurretStat.Damage = 2f;
+        _turretStatSO.WaterTurretStat.Range = 5f;
+
+        _turretStatSO.LandTurretStat.AttackSpeed = 0.7f;
+        _turretStatSO.LandTurretStat.Damage = 2f;
+        _turretStatSO.LandTurretStat.Range = 5f;
+
     }
 
-    public void MainTurretUpgrade(string stat, int value)
+    public void UpgradeTurret(ElementType elementType, int value)
     {
-        mainUpgradeCount++;
+        UpgradeCount++;
 
-        value *= mainUpgradeCount;
+        value *= UpgradeCount;
 
-        switch (stat)
+        switch (elementType)
         {
-            case "AttackSpeed":
-                _turretStatSO.MainTurretStat.AttackSpeed += value;
+            case ElementType.Air:
+                _turretStatSO.WindTurretStat.AttackSpeed += value;
+                _turretStatSO.WindTurretStat.Damage += value;
                 break;
-            case "Damage":
-                _turretStatSO.MainTurretStat.Damage += value;
+            case ElementType.Earth:
+                _turretStatSO.LandTurretStat.AttackSpeed += value;
+                _turretStatSO.LandTurretStat.Damage += value;
                 break;
-            case "Range":
-                _turretStatSO.MainTurretStat.Range += value;
+            case ElementType.Fire:
+                _turretStatSO.FireTurretStat.AttackSpeed += value;
+                _turretStatSO.FireTurretStat.Damage += value;
                 break;
-            case "Hp":
-                Debug.Log(stat);
-                _turretStatSO.MainTurretStat.Hp += value;
+            case ElementType.Water:
+                _turretStatSO.WaterTurretStat.AttackSpeed += value;
+                _turretStatSO.WaterTurretStat.Damage += value;
                 break;
         }
 
     }
 
-    public void SubTurretUpgrade(string stat, int value)
-    {
-        subUpgradeCount++;
-
-        value *= subUpgradeCount;
-
-        switch (stat)
-        {
-            case "AttackSpeed":
-                _turretStatSO.SubTurretStat.AttackSpeed += value;
-                break;
-            case "Damage":
-                _turretStatSO.SubTurretStat.Damage += value;
-                break;
-            case "Range":
-                _turretStatSO.SubTurretStat.Range += value;
-                break;
-            case "Hp":
-                _turretStatSO.SubTurretStat.Hp += value;
-                break;
-        }
-
-    }
 }

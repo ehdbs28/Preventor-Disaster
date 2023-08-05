@@ -17,7 +17,7 @@ public class SubTurret : Turret
 
     private void Update()
     {
-        if (CheckInnerDistance(_turretStatSO.SubTurretStat.Range, dir))
+        if (CheckInnerDistance(_turretStatSO.FireTurretStat.Range, dir))
         {
             Attack();
         }
@@ -25,7 +25,7 @@ public class SubTurret : Turret
 
     private void OnDrawGizmos()
     {
-        DrawFanShapedGizmo(transform.position, _turretStatSO.SubTurretStat.Range, detectionAngle / 2, dir);
+        DrawFanShapedGizmo(transform.position, _turretStatSO.FireTurretStat.Range, detectionAngle / 2, dir);
     }
 
     protected override void SetUp()
