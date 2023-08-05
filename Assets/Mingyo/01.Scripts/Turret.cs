@@ -8,7 +8,14 @@ public abstract class Turret : MonoBehaviour
 
     protected float detectionAngle = 60f;
 
-    //protected abstract void SetUp();
+    protected Animator _animator;
+
+    protected int attackTriggerHash = Animator.StringToHash("AttackTrigger");
+
+    protected abstract void OnShoot();
+
+    protected abstract void SetUp();
+
     protected abstract void Attack();
 
     protected bool CheckInnerDistance(float range, Vector2 sectorDir)

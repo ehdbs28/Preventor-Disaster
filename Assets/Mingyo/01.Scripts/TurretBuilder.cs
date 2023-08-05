@@ -58,13 +58,12 @@ public class TurretBuilder : MonoBehaviour
             {
                 Transform targetTurret = hit.collider.transform.Find("Turret");
 
-                _turretSpriteRenderer.color = targetTurret.GetComponent<SpriteRenderer>().color;
+                _turretSpriteRenderer.sprite = targetTurret.GetComponent<SpriteRenderer>().sprite;
                 _turret.transform.localScale = targetTurret.transform.localScale;
             }
             else
             {
-                _turret.transform.localScale = new Vector3(1,1,1);
-                _turretSpriteRenderer.color = Color.white;
+                _turret.transform.localScale = new Vector2(0.1f,0.1f);
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -73,7 +72,6 @@ public class TurretBuilder : MonoBehaviour
                 {
                     hit.transform.Find("Turret").gameObject.SetActive(true);
                     hit.collider.GetComponent<SpriteRenderer>().enabled = false;
-                    _turretSpriteRenderer.color = Color.white;
 
                     isWaiting = false;
                     _turret.gameObject.SetActive(false);
